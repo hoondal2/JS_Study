@@ -39,7 +39,7 @@ function User(first, last) {
     this.firstName = first
     this.lastName = last
 }
-user.prototype.getFullName = function () {
+User.prototype.getFullName = function () {
     return `${this.firstName} ${this.lastName}`
 } // 메모리에 딱 한번만 만들어진다. 
 
