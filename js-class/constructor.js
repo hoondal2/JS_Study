@@ -35,13 +35,24 @@
 */
 
 
-function User(first, last) { 
-    this.firstName = first
-    this.lastName = last
+// function User(first, last) { 
+//     this.firstName = first
+//     this.lastName = last
+// }
+// User.prototype.getFullName = function () {
+//     return `${this.firstName} ${this.lastName}`
+// } // 메모리에 딱 한번만 만들어진다. 
+
+// 아래와 같이 구현가능. 많이 사용, 권장한다.
+class User {
+    constructor(first, last) {
+        this.firstName = first
+        this.lastName = last
+    }
+    getFullName() {
+        return `${this.firstName} ${this.lastName}`
+    }
 }
-User.prototype.getFullName = function () {
-    return `${this.firstName} ${this.lastName}`
-} // 메모리에 딱 한번만 만들어진다. 
 
 const heropy = new User('Heropy', 'Park') // 생성자 함수, 하나의 객체 데이터를 생성
 const amy = new User('Amy', 'Clark')
